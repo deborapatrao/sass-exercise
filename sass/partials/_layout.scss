@@ -1,0 +1,165 @@
+.wrapper {
+  padding: 0 2%;
+  @include mediaQuery($tablet) {
+    padding: 0 5%;
+  }
+
+  @include mediaQuery($desktop) {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
+main .wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1.5rem;
+
+  @include mediaQuery($tablet) {
+    gap: 2.5rem;
+  }
+
+  @include mediaQuery($desktop) {
+    gap: 4rem;
+  }
+}
+section {
+  .section-content {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+    padding: $section-padding;
+  }
+}
+
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: $std-gap;
+}
+
+//services
+.service-items {
+  display: grid;
+  gap: 2rem;
+
+  @include mediaQuery($tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mediaQuery($desktop) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+  }
+}
+
+.service-item,
+.feature-item a {
+  display: flex;
+  gap: $std-gap;
+}
+
+.service-item {
+  @include mediaQuery($desktop) {
+    flex-direction: column;
+  }
+}
+
+.service-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+//features
+.feature-items ul {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $std-gap;
+}
+
+.img-text-50 {
+  display: grid;
+
+  @include mediaQuery($desktop) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+//about
+.about {
+  @include mediaQuery($desktop) {
+    .about-image {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .section-content {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
+}
+
+//reviews
+.review-cards {
+  @include column-to-row();
+  gap: 2rem;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+
+  @include mediaQuery($desktop) {
+    padding: 0;
+  }
+}
+
+.review-card {
+  @include mediaQuery($tablet) {
+    flex-grow: 1;
+    flex-basis: 45%;
+  }
+
+  @include mediaQuery($desktop) {
+    flex-basis: 20%;
+  }
+
+  blockquote {
+    display: flex;
+    flex-direction: column;
+    gap: $std-gap;
+    padding: 1.5rem;
+  }
+}
+
+//case study
+.case-studies {
+  @include column-to-row();
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  @include mediaQuery($desktop) {
+    flex-wrap: nowrap;
+  }
+}
+
+.case-study {
+  @include mediaQuery($tablet) {
+    flex-basis: 45%;
+    flex-grow: 1;
+  }
+
+  @include mediaQuery($desktop) {
+    flex-basis: auto;
+  }
+}
+
+.case-study:first-of-type {
+  @include mediaQuery($tablet) {
+    flex-basis: 100%;
+  }
+
+  @include mediaQuery($desktop) {
+    flex-basis: auto;
+  }
+}

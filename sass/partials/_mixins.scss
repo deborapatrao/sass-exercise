@@ -1,0 +1,54 @@
+@mixin gradient($deg: 33deg) {
+  background: linear-gradient(
+    $deg,
+    rgba(255, 211, 196, 1) 0%,
+    rgba(228, 252, 215, 1) 100%
+  );
+}
+
+@mixin mainNav() {
+  ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: end;
+    gap: 0.5rem;
+  }
+  li {
+    padding: 0.25rem;
+
+    .active {
+      border-bottom: $border-active;
+    }
+  }
+}
+
+//This mixin create all the styles for the buttons used in the project. So it is easy and quick to style them
+@mixin btn() {
+  background-color: $color-main-pink;
+  padding: 0.75rem 2rem;
+  border-radius: $std-radius;
+  color: white;
+  font-weight: 800;
+  display: inline-block;
+  transition: all 150ms ease-in;
+}
+
+//many elements had the behaviour of changing the flex direction on different media queries, this mixin made the layout set up a little faster
+@mixin column-to-row() {
+  display: flex;
+  flex-direction: column;
+
+  @include mediaQuery($tablet) {
+    flex-direction: row;
+  }
+}
+
+//these variables and mixin helped defining the media queries through all the project. Using $tablet and $desktop for variables made it intuitive to use on the project.
+$tablet: 800px;
+$desktop: 1100px;
+
+@mixin mediaQuery($device) {
+  @media only screen and (min-width: $device) {
+    @content;
+  }
+}

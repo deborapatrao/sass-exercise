@@ -1,0 +1,44 @@
+/*
+TABLE OF CONTENTS
+
+1. RESET
+2. TYPOGRAPHY
+3. HEADER - FOOTER
+4. NAVIGATION
+5. MEDIA
+6. LAYOUT
+7. SECTIONS
+8. ANIMATIONS
+9. ACCESSIBILITY
+*/
+
+//VARIABLES & MIXINS
+@import "partials/variables";
+@import "partials/mixins";
+
+/* *** RESET *** */
+@import "partials/reset";
+
+/* *** TYPOGRAPHY *** */
+@import "partials/typography";
+
+/* *** HEADER - FOOTER *** */
+@import "partials/header-footer";
+
+/* *** NAVIGATION *** */
+@import "partials/navigation";
+
+/* *** MEDIA *** */
+@import "partials/media";
+
+/* *** LAYOUT *** */
+@import "partials/layout";
+
+/* *** SECTIONS *** */
+@import "partials/sections";
+
+/* *** ANIMATIONS *** */
+@import "partials/animations";
+
+/* *** ACCESSIBILITY *** */
+@import "partials/accessibility";

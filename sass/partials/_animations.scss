@@ -1,0 +1,22 @@
+@keyframes floating {
+  0% {
+    transform: translate(-10px, 10px);
+  }
+
+  50% {
+    transform: translate(10px, -10px);
+  }
+  100% {
+    transform: translate(-10px, 10px);
+  }
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
+}

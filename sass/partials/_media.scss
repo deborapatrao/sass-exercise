@@ -1,0 +1,20 @@
+.banner-image {
+  text-align: right;
+}
+
+.feature-image img {
+  animation: floating 8s ease-in-out infinite;
+  z-index: 1;
+  position: relative;
+  @include mediaQuery($desktop) {
+    max-width: 250px;
+  }
+}
+
+.feature-image {
+  text-align: center;
+}
+
+.about-image img {
+  border-radius: $std-radius;
+}

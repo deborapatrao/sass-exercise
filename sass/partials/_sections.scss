@@ -1,0 +1,109 @@
+//Banner
+.hero-banner {
+  @include gradient();
+  background-size: 500%;
+  padding-top: 4rem;
+  border-radius: $std-radius;
+  animation: gradient-animation 10s infinite alternate;
+
+  @include mediaQuery($desktop) {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding-top: 0;
+
+    .site-heading {
+      justify-content: center;
+    }
+  }
+}
+
+.site-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+//Sections
+section {
+  scroll-margin-top: 5.5rem;
+}
+.section-desc {
+  color: $color-dark-grey;
+}
+
+//Service
+.services .section-heading {
+  text-align: center;
+}
+
+.service-icon i {
+  color: $color-main-pink;
+  font-size: 1.5rem;
+  width: 30px;
+}
+
+//feature
+.feature-icon i {
+  color: $color-main-pink;
+  width: 30px;
+}
+
+//reviews
+
+.review-card {
+  background-color: white;
+  border-radius: $std-radius;
+  box-shadow: $std-shadow;
+
+  overflow: hidden;
+
+  blockquote {
+    border-left: 15px solid $color-main-pink;
+    height: 100%;
+  }
+
+  .review-content {
+    font-style: italic;
+  }
+
+  .review-name {
+    font-size: 0.875rem;
+    font-weight: 800;
+  }
+}
+
+.review {
+  @include gradient();
+
+  @include mediaQuery($tablet) {
+    border-radius: $std-radius;
+  }
+}
+
+//case studies
+
+.case-study {
+  img {
+    border-radius: $std-radius;
+    transition: all ease-out 300ms;
+  }
+
+  h3,
+  p {
+    padding-left: 0.5rem;
+  }
+
+  p {
+    font-size: 0.75rem;
+  }
+}
+
+.case-study:hover img {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
